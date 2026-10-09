@@ -1,0 +1,6 @@
+# Dependencies whose install scripts are not needed: pi's provider SDKs and an
+# optional bundler binary are never executed by the tests or the type check.
+allowBuilds:
+  '@google/genai': false
+  esbuild: false
+  protobufjs: false

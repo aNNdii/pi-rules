@@ -1,0 +1,40 @@
+{
+  "name": "pi-rules",
+  "version": "0.1.0",
+  "description": "Path-scoped and always-applying rules for the pi coding agent, loaded from .agents/rules, .pi/rules and .claude/rules",
+  "keywords": ["pi", "pi-package", "pi-extension", "rules"],
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "files": ["extensions"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aNNdii/pi-rules.git"
+  },
+  "pi": {
+    "extensions": ["./extensions/rules.ts"]
+  },
+  "scripts": {
+    "lint": "biome check",
+    "lint:fix": "biome check --write .",
+    "type:check": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "pnpm lint && pnpm type:check && pnpm test"
+  },
+  "engines": {
+    "node": ">=22.19"
+  },
+  "packageManager": "pnpm@12.10.1",
+  "peerDependencies": {
+    "@earendil-works/pi-agent-core": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.4",
+    "@earendil-works/pi-agent-core": "^1.1.0",
+    "@earendil-works/pi-coding-agent": "^1.1.0",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
+  }
+}
